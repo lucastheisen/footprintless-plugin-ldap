@@ -7,7 +7,7 @@ package Footprintless::Plugin::Ldap::DefaultCommandHelper;
 # PODNAME: Footprintless::Plugin::Ldap::DefaultCommandHelper
 
 use Carp;
-use Footprintless::Plugin::Ldap::ApacheDsUtil;
+use Footprintless::Plugin::Ldap::ApacheDsLdapUtil;
 
 sub new {
     return bless({}, shift)->_init(@_);
@@ -20,19 +20,19 @@ sub allowed_destination {
 
 sub backup {
     my ($self, $ldap, $file, %options) = @_;
-    Footprintless::Plugin::Ldap::ApacheDsUtil::backup(
+    Footprintless::Plugin::Ldap::ApacheDsLdapUtil::backup(
         $ldap, $file, %options);
 }
 
 sub copy {
     my ($self, $ldap_from, $ldap_to, %options) = @_;
-    Footprintless::Plugin::Ldap::ApacheDsUtil::copy(
+    Footprintless::Plugin::Ldap::ApacheDsLdapUtil::copy(
         $ldap_from, $ldap_to, %options);
 }
 
 sub copy_user {
     my ($self, $ldap_from, $ldap_to, %options) = @_;
-    Footprintless::Plugin::Ldap::ApacheDsUtil::copy_user(
+    Footprintless::Plugin::Ldap::ApacheDsLdapUtil::copy_user(
         $ldap_from, $ldap_to, %options);
 }
 
@@ -50,7 +50,7 @@ sub locate_file {
 
 sub restore {
     my ($self, $ldap, $file, %options) = @_;
-    Footprintless::Plugin::Ldap::ApacheDsUtil::restore(
+    Footprintless::Plugin::Ldap::ApacheDsLdapUtil::restore(
         $ldap, $file, %options);
 }
 

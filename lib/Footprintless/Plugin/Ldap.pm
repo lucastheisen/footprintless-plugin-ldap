@@ -64,6 +64,10 @@ L<Footprintless::Plugin::Ldap::DefaultCommandHelper>:
 
 Returns a new ldap provider instance.  See L<Footprintless::Plugin::Ldap::Ldap>.
 
+=method ldap_command_helper($footprintless, $coordinate, %options)
+
+Returns a new ldap command helper.  See L<Footprintless::Plugin::Ldap::DefaultCommandHelper>.
+
 =for Pod::Coverage factory_methods
 
 =head1 SEE ALSO

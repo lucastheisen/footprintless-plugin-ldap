@@ -10,11 +10,11 @@ use parent qw(Footprintless::App::ActionCommand);
 
 sub _actions {
     return (
-        'backup' => 'Footprintless::Ldap::LdapPlugin::Command::ldap::backup',
-        'copy-to' => 'Footprintless::Ldap::LdapPlugin::Command::ldap::copy_to',
-        'copy-user-to' => 'Footprintless::Ldap::LdapPlugin::Command::ldap::copy_user_to',
-        'restore' => 'Footprintless::Ldap::LdapPlugin::Command::ldap::restore',
-        'search' => 'Footprintless::Ldap::LdapPlugin::Command::ldap::search'
+        'backup' => 'Footprintless::Plugin::Ldap::Command::ldap::backup',
+        'copy-to' => 'Footprintless::Plugin::Ldap::Command::ldap::copy_to',
+        'copy-user-to' => 'Footprintless::Plugin::Ldap::Command::ldap::copy_user_to',
+        'restore' => 'Footprintless::Plugin::Ldap::Command::ldap::restore',
+        'search' => 'Footprintless::Plugin::Ldap::Command::ldap::search'
     );
 }
 
@@ -27,6 +27,8 @@ sub usage_desc {
 =head1 SYNOPSIS
 
     fpl ldap proj.env.ldap backup
+    fpl ldap proj.env.ldap copy-to
+    fpl ldap proj.env.ldap copy-user-to
     fpl ldap proj.env.ldap restore
     fpl ldap proj.env.ldap search
 
